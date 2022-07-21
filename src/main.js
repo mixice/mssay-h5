@@ -1,8 +1,8 @@
-import 'uigg/uigg.css';
+import 'uigg/uigg.css'
 import './app.css'
 
-import App from './App.svelte';
-import anime from 'animejs/lib/anime.min.js';
+import App from './App.svelte'
+import anime from 'animejs/lib/anime.min.js'
 
 const app = new App({
 	target: document.body,
