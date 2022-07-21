@@ -1,4 +1,6 @@
 import './app.css'
+import 'uigg/uigg.css';
+
 import App from './App.svelte';
 import anime from 'animejs/lib/anime.min.js';
 

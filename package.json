@@ -19,6 +19,7 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "atropos": "^1.0.2",
-    "swiper": "^8.3.1"
+    "swiper": "^8.3.1",
+    "uigg": "^1.1.14"
   }
 }
