@@ -37,7 +37,7 @@
 					</Atropos>
 					<span>
 						<i class="ico ico-qrcode"></i>
-						<em class="anime-fade-in"><img src="images/case/{number}/0.png" alt></em>
+						<em class="anime-fade-in"><img src="images/case/{number}/0.png" alt=""></em>
 					</span>
 				</li>
 			</SwiperSlide>

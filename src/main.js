@@ -1,4 +1,6 @@
+import './app.css'
 import App from './App.svelte';
+import anime from 'animejs/lib/anime.min.js';
 
 const app = new App({
 	target: document.body,
@@ -11,6 +13,7 @@ export default app;
 
 //banner anime
 anime({targets: '.banner u i',translateX: [800,0],opacity: [0,1],delay: anime.stagger(300),loop: true,endDelay: 3000,});
+// @ts-ignore
 alone = $('.banner b');
 $(function(){
 	anime({targets: '.banner b z',translateX: [-500,0],opacity: [0,1],delay: anime.stagger(100),loop: true,endDelay: 5000,});
@@ -18,14 +21,16 @@ $(function(){
 
 //skill
 $('.skill li').mouseenter(function(){
+	// @ts-ignore
 	$('.skill audio').attr('src','media/skill/' + ($(this).index() + 1) + '.mp3')[0].play();
 });
-$('.skill li').click(function(){
+$('.skill li').on('click',function(){
 	$('.skill .popup pop').eq($(this).index()).show();
 });
 
 //process
 $('.process li').mouseenter(function(){
+	// @ts-ignore
 	$('.process audio').attr('src','media/process/' + ($(this).index() + 1) + '.mp3')[0].play();
 });
 
@@ -33,15 +38,17 @@ $('.process li').mouseenter(function(){
 $('.brand li a').each(function(){
 	if($(this).attr('href') == ''){
 		$(this).removeAttr('href');
-		$(this).click(function(){
+		$(this).on('click',function(){
+			// @ts-ignore
 			notifyVal = '暂无链接';
+			// @ts-ignore
 			notify();
 		});
 	}
 });
 
 //contact
-$('.contact li').click(function(){
+$('.contact li').on('click',function(){
 	$('.contact .popup pop').eq($(this).index()).show();
 });
 
@@ -87,7 +94,9 @@ const particles = (new Array(PARTICLE_COUNT))
 .map(particlePrototype);
 const update = () => {
     particles.forEach(p1 => {
+		// @ts-ignore
 		p1.x += (Math.cos(p1.angle) + (Math.cos(time * p1.oscSpeedX) * p1.oscAmplitudeX)) * p1.speed;
+		// @ts-ignore
 		p1.y += (Math.sin(p1.angle) + (Math.cos(time * p1.oscSpeedY) * p1.oscAmplitudeY)) * p1.speed;
 		p1.speed = lerp(p1.speed, p1.normalSpeed * RESOLUTION, 0.1);
 		if (p1.x > w || p1.x < 0) {p1.angle = PI - p1.angle;}
@@ -122,6 +131,7 @@ const render = () => {
 			};
 		})
 		.forEach((line, i) => {
+			// @ts-ignore
 			const colorSwing = Math.sin(time * (line.p1.oscSpeedX));
 			ctx.beginPath();
 			ctx.globalAlpha = line.opacity;
@@ -146,7 +156,9 @@ const loop = () => {
 };
 loop();
 window.addEventListener('mousemove', e => {
+	// @ts-ignore
 	const mouseX = e.layerX * RESOLUTION;
+	// @ts-ignore
 	const mouseY = e.layerY * RESOLUTION;
 	particles.forEach(p => {
 		const dist = distance(mouseX, mouseY, p.x, p.y);
@@ -161,9 +173,6 @@ window.addEventListener('resize', e => {
 	w = canvas.width = window.innerWidth * RESOLUTION;
 	h = canvas.height = window.innerHeight * RESOLUTION;
 });
-
-
-
 
 
 

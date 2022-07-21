@@ -1,15 +1,17 @@
 <script>
-	import Banner from './Banner.svelte';
-	import Case from './Case.svelte';
-	import Skill from './Skill.svelte';
-	import Process from './Process.svelte';
-	import Brand from './Brand.svelte';
-	import Contact from './Contact.svelte';
+	import Banner from './lib/Banner.svelte';
+	import Case from './lib/Case.svelte';
+	import Skill from './lib/Skill.svelte';
+	import Process from './lib/Process.svelte';
+	import Brand from './lib/Brand.svelte';
+	import Contact from './lib/Contact.svelte';
 
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 	import 'swiper/css';
 	import { Mousewheel, Pagination } from 'swiper';
 	import 'swiper/css/pagination';
+
+	import anime from 'animejs/lib/anime.min.js';
 
 	function ani(){
 		anime({targets: '.skill li',translateY: [200,0],opacity: [0,1],delay: anime.stagger(100),});

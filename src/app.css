@@ -1,7 +1,7 @@
 /* basic */
 :root {
-    --blue: #0031ff;
-    --deep: #0f1941;
+  --blue: #0031ff;
+  --deep: #0f1941;
 }
 
 * {font-family: montserrat !important;}
@@ -28,16 +28,16 @@ shadow {background-color: var(--blue);box-shadow: 0 3px 10px var(--blue);width: 
 
 
 @media(max-width:640px) {
-    /* basic */
-    shadow {box-shadow: 0 .03rem .1rem var(--blue);width: calc(100% - .6rem);}
+  /* basic */
+  shadow {box-shadow: 0 .03rem .1rem var(--blue);width: calc(100% - .6rem);}
 
-    /* swiper */
-    .subject .swiper-pagination-bullets {right: .2rem !important;}
-    .subject .swiper-pagination-bullet {width: .03rem;height: .5rem;}
-    .project .swiper-pagination-bullets {bottom: .2rem !important;}
-    .project .swiper-pagination-bullet {width: .5rem;height: .03rem;}
-    .project .swiper-button-prev {left: 5%;}
-    .project .swiper-button-next {right: 5%;}
+  /* swiper */
+  .subject .swiper-pagination-bullets {right: .2rem !important;}
+  .subject .swiper-pagination-bullet {width: .03rem;height: .5rem;}
+  .project .swiper-pagination-bullets {bottom: .2rem !important;}
+  .project .swiper-pagination-bullet {width: .5rem;height: .03rem;}
+  .project .swiper-button-prev {left: 5%;}
+  .project .swiper-button-next {right: 5%;}
 }
 
 
