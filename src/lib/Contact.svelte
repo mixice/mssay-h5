@@ -2,17 +2,14 @@
 	let contactBg = 'images/contact.png';
 	const contact = [
 		{type: '联系电话', ico: 'ico-call', color: 'var(--blue)', cont: [
-			{txt: '18215582510', href: 'tel:18215582510',},
 			{txt: '13330430414', href: 'tel:13330430414',},
 		],},
 		{type: '邮件', ico: 'ico-mail', color: 'var(--red)', cont: [
 			{txt: 'ms@mssay.com', href: 'mailto:ms@mssay.com',},
 			{txt: 'mixice@mixice.com', href: 'mailto:mixice@mixice.com',},
-			{txt: '767557453@qq.com', href: 'mailto:767557453@qq.com',},
 		],},
 		{type: '微信', ico: 'ico-wechat', color: 'var(--green)', cont: [
-			{txt: 'py767557453', href: '',},
-			{txt: 'mixicerain', href: '',},
+			{txt: '544490', href: '',},
 		],},
 		{type: 'QQ', ico: 'ico-qq', color: 'var(--orange)', cont: [
 			{txt: '247083860', href: '',},
